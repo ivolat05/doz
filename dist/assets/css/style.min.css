@@ -1,55 +1,37 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "Montserrat";
-  src: url("../../assets/font/Montserrat-Bold.eot");
-  src: url("../../assets/font/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Montserrat-Bold.woff2") format("woff2"), url("../../assets/font/Montserrat-Bold.woff") format("woff"), url("../../assets/font/Montserrat-Bold.ttf") format("truetype"), url("../../assets/font/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "Montserrat";
-  src: url("../../assets/font/Montserrat-Medium.eot");
-  src: url("../../assets/font/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Montserrat-Medium.woff2") format("woff2"), url("../../assets/font/Montserrat-Medium.woff") format("woff"), url("../../assets/font/Montserrat-Medium.ttf") format("truetype"), url("../../assets/font/Montserrat-Medium.svg#Montserrat-Medium") format("svg");
+    font-family: 'Manrope';
+  src: url("../../assets/font/Manrope-Medium.eot");
+  src: url("../../assets/font/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Manrope-Medium.woff2") format("woff2"), url("../../assets/font/Manrope-Medium.woff") format("woff"), url("../../assets/font/Manrope-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-    font-family: "Montserrat";
-  src: url("../../assets/font/Montserrat-Regular.eot");
-  src: url("../../assets/font/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Montserrat-Regular.woff2") format("woff2"), url("../../assets/font/Montserrat-Regular.woff") format("woff"), url("../../assets/font/Montserrat-Regular.ttf") format("truetype"), url("../../assets/font/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+    font-family: 'Manrope';
+  src: url("../../assets/font/Manrope-Regular.eot");
+  src: url("../../assets/font/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Manrope-Regular.woff2") format("woff2"), url("../../assets/font/Manrope-Regular.woff") format("woff"), url("../../assets/font/Manrope-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-    font-family: "Montserrat";
-  src: url("../../assets/font/Montserrat-SemiBold.eot");
-  src: url("../../assets/font/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Montserrat-SemiBold.woff2") format("woff2"), url("../../assets/font/Montserrat-SemiBold.woff") format("woff"), url("../../assets/font/Montserrat-SemiBold.ttf") format("truetype"), url("../../assets/font/Montserrat-SemiBold.svg#Montserrat-SemiBold") format("svg");
+    font-family: 'Manrope';
+  src: url("../../assets/font/Manrope-ExtraBold.eot");
+  src: url("../../assets/font/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Manrope-ExtraBold.woff2") format("woff2"), url("../../assets/font/Manrope-ExtraBold.woff") format("woff"), url("../../assets/font/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Manrope';
+  src: url("../../assets/font/Manrope-SemiBold.eot");
+  src: url("../../assets/font/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Manrope-SemiBold.woff2") format("woff2"), url("../../assets/font/Manrope-SemiBold.woff") format("woff"), url("../../assets/font/Manrope-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "Poppins";
-  src: url("../../assets/font/Poppins-Regular.eot");
-  src: url("../../assets/font/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Poppins-Regular.woff2") format("woff2"), url("../../assets/font/Poppins-Regular.woff") format("woff"), url("../../assets/font/Poppins-Regular.ttf") format("truetype"), url("../../assets/font/Poppins-Regular.svg#Poppins-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "Inter";
-  src: url("../../assets/font/Inter-Regular.eot");
-  src: url("../../assets/font/Inter-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/font/Inter-Regular.woff2") format("woff2"), url("../../assets/font/Inter-Regular.woff") format("woff"), url("../../assets/font/Inter-Regular.ttf") format("truetype"), url("../../assets/font/Inter-Regular.svg#Inter-Regular") format("svg");
-  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -155,6 +137,11 @@ input, select {
 *::before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #0B0F19;
 }
 
 a {
@@ -225,6 +212,23 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.footer {
+    margin-bottom: 0;
+    margin-top: auto;
 }
 
 
