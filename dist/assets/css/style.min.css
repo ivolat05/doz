@@ -282,6 +282,56 @@ input[type="number"]::-webkit-inner-spin-button {
     }
 }
 
+.btn {
+    width: 265px;
+    height: 52px;
+    border: 1px solid #0D614E;
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 14px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: #0D614E;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.btn:hover {
+    background: #0D614E;
+    color: #fff;
+}
+
+.btn:hover .btn-svg {
+    left: 3px;
+}
+
+.btn:hover .btn-svg path {
+    fill: #fff;
+}
+
+.btn-svg {
+    position: relative;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.btn-svg path {
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
 
 .header {
     width: 100%;
@@ -346,6 +396,13 @@ input[type="number"]::-webkit-inner-spin-button {
     line-height: 160%;
     color: #33354D;
     margin-right: 40px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+.header-list-link:hover {
+    color: #0D614E;
 }
 
 .header-logo {
@@ -570,4 +627,240 @@ input[type="number"]::-webkit-inner-spin-button {
     -o-object-fit: contain;
     object-fit: contain;
     margin-right: 8px;
+}
+
+.chairs-padding {
+    padding-top: 152px;
+}
+
+.chairs-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.chairs-wrapp {
+    display: grid;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    grid-template-columns: 32% 32% 32%;
+}
+
+.chairs-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.chairs-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 130%;
+    color: #0B0F19;
+}
+
+.chairs-head-link {
+    width: 265px;
+    height: 52px;
+}
+
+.chairs-head {
+    width: 100%;
+    height: 460px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #F4F6F7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.chairs-box-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.chairs-box-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 140%;
+    color: #0B0F19;
+    padding-bottom: 16px;
+}
+
+.chairs-box-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    margin-bottom: 16px;
+}
+
+.chairs-label {
+    position: relative;
+    margin-right: 16px;
+}
+
+.chairs-label-span {
+    width: 34px;
+    height: 34px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    background: #F3F2F0;
+    border-radius: 2px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.chairs-label-span.--brown {
+    background: #8E6C4E;
+}
+
+.chairs-label-span.--black {
+    background: #0B0F19;
+}
+
+.chairs-label-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -333;
+    opacity: 0;
+}
+
+.chairs-label-input:checked + .chairs-label-span::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.chairs-color-img {
+    width: 12px;
+    height: 10px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.chairs-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #565973;
+    padding-left: 6px;
+    padding-bottom: 25px;
+}
+
+.chairs-color-name {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #565973;
+    padding-left: 4px;
+}
+
+.chairs-box-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+.chairs-btn {
+    width: 156px;
+    height: 48px;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-right: 10px;
+}
+
+.chairs-btn:hover {
+    width: 160px;
+}
+
+.chairs-box-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0);
+    width: 174px;
+    height: 48px;
+    padding: 11px 28px;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #0D614E;
+    border-radius: 6px;
+}
+
+.chairs-box-link:hover {
+    width: 177px;
+    border: 1px solid #0D614E;
+}
+
+.chairs-box-link:hover .btn-svg {
+    left: 3px;
 }
