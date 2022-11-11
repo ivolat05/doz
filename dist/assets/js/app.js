@@ -13,7 +13,6 @@ function chairs() {
 				className.src = dataImg;
 				colorName.innerHTML = color;
 				inp.value = color;
-				console.log(inp.value)
 			})
 		})
 	}
