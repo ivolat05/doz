@@ -926,6 +926,127 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #565973;
 }
 
+.about-wrapp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.about-padding {
+    padding-top: 140px;
+}
+
+.about-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 130%;
+    color: #0B0F19;
+    padding-bottom: 37px;
+}
+
+.about-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #565973;
+    padding-bottom: 20px;
+}
+
+.about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.about-coll-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    padding-top: 28px;
+    padding-bottom: 74px;
+}
+
+.about-row-coll {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 130%;
+    color: #0B0F19;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 37px;
+}
+
+.about-row-coll span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #565973;
+    padding-left: 6px;
+}
+
+.about-row-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #565973;
+    padding-top: 13px;
+    padding-right: 16px;
+}
+
+.about-link {
+    width: 243px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.about-link:hover {
+    width: 246px;
+}
+
+.about-img {
+    width: 306px;
+    height: 360px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.about-img.--three {
+    height: 333px;
+}
+
+.about-coll {
+    width: 40%;
+    padding-top: 60px;
+}
+
+.about-container {
+    width: 49%;
+}
+
+.about-container-coll {
+    width: 49%;
+    position: relative;
+}
+
+.about-container-coll:nth-child(1) {
+    top: 58px;
+}
+
 .text {
     padding-top: 35px;
     padding-bottom: 30px;
