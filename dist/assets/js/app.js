@@ -41,4 +41,40 @@ $(function () {
 		}
 	}
 	chairs()
+
+	// menu
+	function menu() {
+		const btn = document.querySelector('.menu-open');
+		const btnClose = document.querySelector('.menu-close');
+		const menu = document.querySelector('.header-coll');
+		const body = document.querySelector('body');
+		const fon = document.querySelector('.fon');
+
+		if (btn) {
+			btn.addEventListener('click', () => {
+				menu.classList.add('--active');
+				fon.classList.add('--active');
+				body.classList.add('--stop');
+			})
+			btnClose.addEventListener('click', () => {
+				menu.classList.remove('--active');
+				fon.classList.remove('--active');
+				body.classList.remove('--stop');
+			})
+			fon.addEventListener('click', () => {
+				menu.classList.remove('--active');
+				fon.classList.remove('--active');
+				body.classList.remove('--stop');
+			})
+
+			window.addEventListener("resize", function () {
+				if (window.innerWidth >= 992) {
+					menu.classList.remove('--active');
+					fon.classList.remove('--active');
+					body.classList.remove('--stop');
+				}
+			});
+		}
+	}
+	menu();
 })
