@@ -38,7 +38,12 @@
 					</a>
 					<div class="header-coll">
 						<button class="menu-close">
-							<img src="./assets/img/header/close.svg" alt="" class="menu-open-img">
+							<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M15.288 0.516113L8.92351 6.87911L2.56051 0.516113L0.439514 2.63711L6.80251 9.00011L0.439514 15.3631L2.56051 17.4841L8.92351 11.1211L15.288 17.4841L17.409 15.3631L11.046 9.00011L17.409 2.63711L15.288 0.516113Z"
+									fill="#565973" />
+							</svg>
+		
 						</button>
 						<ul class="header-list">
 							<li class="header-list-inner">
@@ -72,7 +77,7 @@
 									+7 (921) 887-65-79
 								</a>
 							</div>
-							<a href="#" class="header-btn">
+							<a href="#popup" class="open-modal header-btn">
 								Заказать звонок
 							</a>
 						</div>
@@ -137,7 +142,7 @@
 								info@dozleader.ru
 							</a>
 						</div>
-						<a href="#" class="main-btn-mob">
+						<a href="#popup" class="open-modal main-btn-mob">
 							Заказать звонок
 							<svg class="btn-svg" width="14" height="14" viewBox="0 0 14 14" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -517,12 +522,12 @@
 						</h4>
 						<textarea class="forms-textarea" placeholder="Опишите вош вопрос..."></textarea>
 						<label class="forms-label">
-							<input type="checkbox" class="forms-label-input status" data-btn="btn-1" checked>
+							<input type="checkbox" class="forms-label-input status" data-btn="btn-2" checked>
 							<span class="forms-label-span">
 								Я даю согласие на обработку персональных данных
 							</span>
 						</label>
-						<button id="btn-1" type="submit" class="forms-btn -deactive">
+						<button id="btn-2" type="submit" class="forms-btn -deactive">
 							Заказать звонок
 						</button>
 					</form>
@@ -607,6 +612,54 @@
 				</div>
 			</div>
 		</footer>
+		<div id="popup" class="popup mfp-hide">
+		
+			<div class="popup-head-coll">
+				<h3 class="popup-title">
+					Заказать звонок
+				</h3> <button class="popup-close-btn">
+					<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M15.288 0.516113L8.92351 6.87911L2.56051 0.516113L0.439514 2.63711L6.80251 9.00011L0.439514 15.3631L2.56051 17.4841L8.92351 11.1211L15.288 17.4841L17.409 15.3631L11.046 9.00011L17.409 2.63711L15.288 0.516113Z"
+							fill="#565973" />
+					</svg>
+				</button>
+		
+			</div>
+			<p class="popup-text">
+				У вас есть вопросы? Укажите ваше имя и номер телефона, мы перезвоним. Спасибо!
+			</p>
+		
+			<form action="/" class="popup-form">
+				<div class="popup-row">
+					<div class="popup-row-col">
+						<h4 class="forms-subtitle">
+							Ваше имя
+						</h4>
+						<input type="text" class="forms-input" placeholder="Ваше имя">
+					</div>
+					<div class="popup-row-col">
+						<h4 class="forms-subtitle">
+							Номер телефона
+						</h4>
+						<input type="tel" class="forms-input mask-tell" placeholder="+7 (000) 000-00-00">
+					</div>
+				</div>
+				<h4 class="forms-subtitle">
+					Сообщение
+				</h4>
+				<textarea class="forms-textarea" placeholder="Опишите вош вопрос..."></textarea>
+				<label class="forms-label">
+					<input type="checkbox" class="forms-label-input status" data-btn="btn-1" checked>
+					<span class="forms-label-span">
+						Я даю согласие на обработку персональных данных
+					</span>
+				</label>
+				<button id="btn-1" type="submit" class="forms-btn -deactive">
+					Заказать звонок
+				</button>
+			</form>
+		</div>
 	</div>
 	
 	<script src="assets/js/app.min.js"></script>
