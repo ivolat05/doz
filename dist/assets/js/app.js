@@ -77,4 +77,45 @@ $(function () {
 		}
 	}
 	menu();
+
+	// активация, блокировка кнопки в форме
+	function checActive() {
+		let btn = document.querySelectorAll('.status');
+		if (btn) {
+			btn.forEach(item => {
+				let dataArr = item.getAttribute('data-btn');
+				let id = document.getElementById(dataArr);
+				if (item.checked) {
+					id.classList.remove('-deactive');
+				} else {
+					id.classList.add('-deactive');
+				}
+				item.addEventListener('click', () => {
+					if (item.checked) {
+						id.classList.remove('-deactive');
+					} else {
+						id.classList.add('-deactive');
+					}
+				})
+			})
+
+		}
+	}
+	checActive();
+
+	// фиксация шапки
+	function headerFixed() {
+		const header = document.querySelector('.header');
+		if (header) {
+			window.onscroll = () => {
+				if (window.pageYOffset > 200) {
+					header.classList.add('header-fixed')
+				} else if (window.pageYOffset == 0) {
+					header.classList.remove('header-fixed')
+				}
+			}
+
+		}
+	}
+	headerFixed();
 })
