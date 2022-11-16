@@ -2029,7 +2029,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .chairs-padding {
     padding-top: 152px;
-    padding-bottom: 130px;
+    padding-bottom: 113px;
 }
 
 .chairs-row {
@@ -2061,7 +2061,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 47px;
 }
 
 .chairs-title {
@@ -2097,6 +2097,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .chairs-box-img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .chairs-box-title {
@@ -2301,6 +2303,31 @@ input[type="number"]::-webkit-inner-spin-button {
     line-height: 160%;
     color: #565973;
     padding-bottom: 13px;
+}
+
+.chairs-catalog-title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 130%;
+    color: #0B0F19;
+    padding-bottom: 17px;
+}
+
+.chairs-catalog-text {
+    max-width: 597px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #565973;
+}
+
+.catalog-padding {
+    padding-top: 40px;
+    padding-bottom: 133px;
+}
+
+.chairs-catalog-row {
+    padding-bottom: 92px;
 }
 
 .advant {
@@ -2566,7 +2593,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .forms-wrapp {
-    background: url("../../assets/img/forms/forms.svg") no-repeat right 0 bottom 0/contain, #F4F6F7;
+    background: #F4F6F7;
     border-radius: 8px;
     padding: 83px 110px 75px 110px;
     display: -webkit-box;
@@ -2575,6 +2602,12 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.forms-foto {
+    background: url("../../assets/img/forms/back.jpg") no-repeat center center/cover;
+    padding-top: 140px;
+    padding-bottom: 130px;
 }
 
 .forms-margin {
@@ -3953,6 +3986,11 @@ input[type="number"]::-webkit-inner-spin-button {
     .forms-row-col {
         width: 100%;
     }
+
+    .forms-foto {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 @media (max-width: 572px) {
@@ -4256,5 +4294,23 @@ input[type="number"]::-webkit-inner-spin-button {
     .awards-box {
         padding: 20px 10px;
         display: block;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .chairs-catalog-row {
+        padding-bottom: 50px;
+    }
+
+    .catalog-padding {
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .chairs-head {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
