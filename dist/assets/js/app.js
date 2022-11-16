@@ -124,21 +124,6 @@ $(function () {
 	}
 	checActive();
 
-	// фиксация шапки
-	function headerFixed() {
-		const header = document.querySelector('.header');
-		if (header) {
-			window.onscroll = () => {
-				if (window.pageYOffset > 200) {
-					header.classList.add('header-fixed')
-				} else if (window.pageYOffset == 0) {
-					header.classList.remove('header-fixed')
-				}
-			}
-
-		}
-	}
-	headerFixed();
 
 	// popup
 
@@ -229,6 +214,7 @@ $(function () {
 
 				}
 			})
+
 			sliderImages.on('slideChangeTransitionEnd', () => {
 				box.forEach(item => {
 					if (item.parentElement.classList.contains('swiper-slide-active')) {
@@ -238,8 +224,16 @@ $(function () {
 
 					}
 				})
+			})
 
+			window.addEventListener('scroll', () => {
+				box.forEach(item => {
+					if (item.parentElement.classList.contains('swiper-slide-active')) {
+						clendarSlaiderBox.style.height = 0;
+						clendarSlaiderBox.style.height = `${+item.clientHeight}px`;
 
+					}
+				})
 			})
 
 		}

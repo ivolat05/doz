@@ -1681,6 +1681,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .header-two {
+    position: static;
     background: #FFFFFF;
     -webkit-box-shadow: 0px 1px 0px #E1E1E1;
     box-shadow: 0px 1px 0px #E1E1E1;
@@ -1823,45 +1824,6 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 20px;
     height: 20px;
     margin-right: 8px;
-}
-
-.header-fixed {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    -webkit-animation-name: head-anim;
-    animation-name: head-anim;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    z-index: 333;
-    background: #FFFFFF;
-    -webkit-box-shadow: 0px 1px 0px #E1E1E1;
-    box-shadow: 0px 1px 0px #E1E1E1;
-}
-
-@-webkit-keyframes head-anim {
-    0% {
-        opacity: 0;
-        top: -100%;
-    }
-
-    100% {
-        opacity: 1;
-        top: 0;
-    }
-}
-
-@keyframes head-anim {
-    0% {
-        opacity: 0;
-        top: -100%;
-    }
-
-    100% {
-        opacity: 1;
-        top: 0;
-    }
 }
 
 .main {
@@ -3080,6 +3042,15 @@ input[type="number"]::-webkit-inner-spin-button {
 .calendar-data {
     overflow: hidden;
     height: 787px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .clendar-slaider {
@@ -3096,8 +3067,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .calendar-controll {
+    padding-left: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
 }
 
 .calendar-slaider-title {
@@ -4083,7 +4057,7 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (max-width: 992px) {
     .bread-list {
         padding-top: 20px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 }
 
@@ -4092,14 +4066,39 @@ input[type="number"]::-webkit-inner-spin-button {
     .calendar-slaider-text {
         width: 95%;
     }
+
+    .calendar-controll {
+        padding-left: 20px;
+    }
 }
 
 @media (max-width: 992px) {
+    .calendar-wrapp {
+        display: block;
+    }
+
+    .calendar-data {
+        width: 100%;
+        height: auto;
+        min-height: 66px;
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
+
+    .btn-slaider-clalendar {
+        margin-bottom: 0;
+    }
+
+    .calendar-controll {
+        padding: 0;
+        width: 100%;
+    }
+
     .calendar-slaider-text {
         width: 100%;
     }
 
-    .calendar-data {
+    .clendar-data-container {
         display: none;
     }
 
@@ -4138,7 +4137,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .clendar-slaider {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 0;
     }
 }
 
