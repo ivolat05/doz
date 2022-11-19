@@ -437,4 +437,31 @@ $(function () {
 	}
 	productColor()
 
+	// recom slaider
+	function recomSlaid() {
+		const recomContainer = document.querySelectorAll('.recom-wrapp');
+		if (recomContainer) {
+			const sliderThumbs = new Swiper('.recom-wrapp', { // ищем слайдер превью по селектору
+				slidesPerView: 1,
+				grabCursor: true,
+				initialSlide: 1,
+				spaceBetween: 30,
+				autoHeight: true,
+				breakpoints: {
+
+					992: {
+
+						slidesPerView: 3,
+					},
+					770: {
+						slidesPerView: 2,
+					},
+
+				}
+			});
+		}
+	}
+
+	recomSlaid();
+
 })
