@@ -280,9 +280,11 @@ $(function () {
 						slidesPerView: 5,
 					},
 					572: {
+						direction: 'horizontal',
 						slidesPerView: 6,
 					},
 					400: {
+						direction: 'horizontal',
 						slidesPerView: 4,
 					}
 				}
