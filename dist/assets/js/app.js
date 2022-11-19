@@ -146,6 +146,17 @@ $(function () {
 			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 		}
 	});
+	$('.gallery-product').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		mainClass: 'mfp-fade',
+		tLoading: 'Загрузка изоброжения',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
 	//popup close
 	function closePopup(closeBtn) {
 		let popupClose = document.querySelectorAll(`.${closeBtn}`);
@@ -241,6 +252,65 @@ $(function () {
 
 	slaiderCalen()
 
+	//product slaider
+	// cлайдер calendar
+
+	function slaiderProduct() {
+		let clenadrBoxONe = document.querySelector('.product-head-slaider ');
+		if (clenadrBoxONe) {
+			const sliderThumbs = new Swiper('.product-slaider-body', { // ищем слайдер превью по селектору
+				direction: 'horizontal',
+				slidesPerView: 3,
+				slidesPerColumn: 1,
+				grabCursor: true,
+				autoHeight: true,
+				autoScrollOffset: 1,
+				initialSlide: 1,
+				spaceBetween: 10,
+				centeredSlides: true,
+				centeredSlidesBounds: true,
+				breakpoints: {
+
+					1400: {
+						direction: 'vertical',
+						slidesPerView: 6,
+					},
+					992: {
+						direction: 'vertical',
+						slidesPerView: 5,
+					},
+					572: {
+						slidesPerView: 6,
+					},
+					400: {
+						slidesPerView: 4,
+					}
+				}
+
+			});
+
+			const sliderImages = new Swiper('.product-head-slaider', {
+				slidesPerView: 1,
+
+				initialSlide: 1,
+				navigation: {
+					nextEl: '.product-slider__next',
+					prevEl: '.product-slider__prev'
+				},
+				grabCursor: true,
+				thumbs: {
+					swiper: sliderThumbs,
+					autoScrollOffset: 1,
+				},
+				autoHeight: true,
+
+			});
+
+		}
+	}
+
+	slaiderProduct()
+
 
 	// asward slaider
 	function aswardSlaid() {
@@ -262,4 +332,109 @@ $(function () {
 	}
 
 	aswardSlaid();
+
+	// вставка наименования стула в модальное окно
+	function modalAddName() {
+		const btn = document.querySelectorAll('.chairs-btn');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let arr = item.getAttribute('data-name');
+					let productName = document.querySelector('.popup-product');
+					productName.innerHTML = arr
+				})
+			})
+		}
+	}
+	modalAddName();
+
+	// коризина колличество товара
+	function basketProduct() {
+		let btnPrev = document.querySelectorAll('.product-coll-prev');
+		let btnNext = document.querySelectorAll('.product-coll-next');
+		let basketNum = document.querySelectorAll('.product-num');
+		if (btnPrev && btnNext && basketNum) {
+			btnPrev.forEach((item) => {
+				item.addEventListener('click', () => {
+					let tabId = item.getAttribute('data-basket');
+					let idInput = document.querySelector(tabId);
+					idInput.value -= 1;
+					if (idInput.value > 0) {
+						if (item.classList.contains('--disabled')) {
+							item.classList.remove('--disabled')
+						}
+					} else if (idInput.value <= 1) {
+						item.classList.add('--disabled')
+						idInput.value = 1;
+					}
+				})
+			})
+			btnNext.forEach((item) => {
+				item.addEventListener('click', () => {
+					let tabId = item.getAttribute('data-basket');
+					let idInput = document.querySelector(tabId);
+					let num = +idInput.value;
+
+					idInput.value = num + 1;
+					if (idInput.value > 1) {
+						btnPrev.forEach(item => {
+							if (item.getAttribute('data-basket') == tabId) {
+
+								if (item.classList.contains('--disabled')) {
+									item.classList.remove('--disabled')
+								}
+							}
+						})
+					}
+
+				})
+			})
+			basketNum.forEach((item) => {
+				item.addEventListener('keyup', () => {
+					console.log(item.value)
+					if (item.value < 0) {
+						item.value = 1;
+					}
+				})
+			})
+
+		}
+	}
+	basketProduct();
+
+
+	// product замена цвета
+	function productColor() {
+		let btn = document.querySelectorAll('.product-label-input');
+		if (btn) {
+			btn.forEach(item => {
+				item.addEventListener('click', () => {
+					let colorName = item.getAttribute('data-colorName');
+					let text = item.getAttribute('data-color');
+					let boxText = document.querySelector('.product-color-name');
+					let headImg = document.querySelectorAll('.product-head-img');
+					let bodyImg = document.querySelectorAll('.poduct-body-img');
+					headImg.forEach(e => {
+						if (e.classList.contains(`${colorName}`)) {
+							e.classList.add('--active')
+							e.parentElement.href = e.src
+						} else {
+							e.classList.remove('--active')
+						}
+					})
+					bodyImg.forEach(event => {
+						if (event.classList.contains(`${colorName}`)) {
+							event.classList.add('--active')
+						} else {
+							event.classList.remove('--active')
+						}
+					})
+					boxText.innerHTML = text;
+
+				})
+			})
+		}
+	}
+	productColor()
+
 })
